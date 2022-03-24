@@ -3,6 +3,7 @@ import csv
 insert_Star = {}
 insert_Director = {}
 insert_Certificate = {}
+insert_Genre = {}
 
 def getQuery(table, column, value):
     value = value.replace("'", "''")
@@ -26,3 +27,11 @@ with open('./load.sql', 'a', encoding='utf-8') as loadFile:
                 if (not insert_Star.get(row['Star'+i], False)) and row['Star'+i] != '' :
                     insert_Star[row['Star'+i]] = True
                     loadFile.write(getQuery('Star', 'name', row['Star'+i]))
+            
+            if row['Genre'] != '': 
+                genre_list = row['Genre'].split(',')
+                for genre in genre_list:
+                    genre = genre.strip()
+                    if not insert_Genre.get(genre, False):
+                        insert_Genre[genre] = True
+                        loadFile.write(getQuery('Genre', 'name', genre))
