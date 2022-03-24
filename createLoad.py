@@ -24,15 +24,47 @@ def getQuery(table, column, value):
 
 def getIMDBQuery(row):
     category_str = ''
-    category_str+=f"c.category = {validate(row['Certificate'])} AND"
-    category_str+=f" d.name = {validate(row['Director'])} AND"
-    category_str+=f" s1.name = {validate(row['Star1'])} AND"
-    category_str+=f" s2.name = {validate(row['Star2'])} AND"
-    category_str+=f" s3.name = {validate(row['Star3'])} AND"
-    category_str+=f" s4.name = {validate(row['Star4'])}"
+    if row['Certificate'] != '':
+        cid = 'c.id'
+        category_str+=f"c.category = {validate(row['Certificate'])} AND "
+    else: 
+        cid = 'NULL'
+
+    if row['Director'] != '':
+        did = 'c.id'
+        category_str+=f"d.name = {validate(row['Director'])} AND "
+    else: 
+        did = 'NULL'
+
+    if row['Star1'] != '':
+        s1id = 's1.id'
+        category_str+=f"s1.name = {validate(row['Star1'])} AND "
+    else: 
+        s1id = 'NULL'
+
+    if row['Star2'] != '':
+        s2id = 's2.id'
+        category_str+=f"s2.name = {validate(row['Star2'])} AND "
+    else: 
+        s2id = 'NULL'
+
+    if row['Star3'] != '':
+        s3id = 's3.id'
+        category_str+=f"s3.name = {validate(row['Star3'])} AND "
+    else: 
+        s3id = 'NULL'
+
+    if row['Star4'] != '':
+        s4id = 's4.id'
+        category_str+=f"s4.name = {validate(row['Star4'])} AND "
+    else: 
+        s4id = 'NULL'
+
+    if category_str != '':
+        category_str = category_str[:-5]
 
     query = f"INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)\n\
-            SELECT {validate(row['Poster_Link'])},{validate(row['Series_Title'])},{validate(row['Released_Year'], 'i')},{validate(row['Runtime'], 'i')},{validate(row['IMDB_Rating'], 'f')},{validate(row['Overview'])},{validate(row['Meta_score'], 'i')},{validate(row['No_of_Votes'], 'i')},{validate(row['Gross'], 'i')}, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id\n\
+            SELECT {validate(row['Poster_Link'])},{validate(row['Series_Title'])},{validate(row['Released_Year'], 'i')},{validate(row['Runtime'], 'i')},{validate(row['IMDB_Rating'], 'f')},{validate(row['Overview'])},{validate(row['Meta_score'], 'i')},{validate(row['No_of_Votes'], 'i')},{validate(row['Gross'], 'i')}, {cid}, 1, {did}, {s1id},{s2id},{s3id},{s4id}\n\
             FROM Certificate c, Director d, Star s1 s2 s3 s4\n\
             WHERE {category_str};\n"
 
