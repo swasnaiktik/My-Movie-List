@@ -24,37 +24,44 @@ def getQuery(table, column, value):
 
 def getIMDBQuery(row):
     category_str = ''
+    table_instances = ''
     if row['Certificate'] != '':
+        table_instances+='Certificate c, '
         cid = 'c.id'
         category_str+=f"c.category = {validate(row['Certificate'])} AND "
     else: 
         cid = 'NULL'
 
     if row['Director'] != '':
+        table_instances+='Director d, '
         did = 'd.id'
         category_str+=f"d.name = {validate(row['Director'])} AND "
     else: 
         did = 'NULL'
 
     if row['Star1'] != '':
+        table_instances+='Star s1, '
         s1id = 's1.id'
         category_str+=f"s1.name = {validate(row['Star1'])} AND "
     else: 
         s1id = 'NULL'
 
     if row['Star2'] != '':
+        table_instances+='Star s2, '
         s2id = 's2.id'
         category_str+=f"s2.name = {validate(row['Star2'])} AND "
     else: 
         s2id = 'NULL'
 
     if row['Star3'] != '':
+        table_instances+='Star s3, '
         s3id = 's3.id'
         category_str+=f"s3.name = {validate(row['Star3'])} AND "
     else: 
         s3id = 'NULL'
 
     if row['Star4'] != '':
+        table_instances+='Star s4, '
         s4id = 's4.id'
         category_str+=f"s4.name = {validate(row['Star4'])} AND "
     else: 
@@ -62,11 +69,15 @@ def getIMDBQuery(row):
 
     if category_str != '':
         category_str = category_str[:-5]
+    
+    if table_instances != '':
+        table_instances = table_instances[:-2]
 
     query = f"INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)\n\
             SELECT {validate(row['Poster_Link'])},{validate(row['Series_Title'])},{validate(row['Released_Year'], 'i')},{validate(row['Runtime'], 'i')},{validate(row['IMDB_Rating'], 'f')},{validate(row['Overview'])},{validate(row['Meta_score'], 'i')},{validate(row['No_of_Votes'], 'i')},{validate(row['Gross'], 'i')}, {cid}, 1, {did}, {s1id},{s2id},{s3id},{s4id}\n\
-            FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4\n\
+            FROM {table_instances}\n\
             WHERE {category_str};\n"
+
     return query
 
 with open('./load.sql', 'a', encoding='utf-8') as loadFile:
@@ -74,7 +85,6 @@ with open('./load.sql', 'a', encoding='utf-8') as loadFile:
     with open('./Data/imdb_top_1000.csv', encoding="utf-8") as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            print(row)
             if (not insert_Certificate.get(row['Certificate'], False)) and row['Certificate'] != '' :
                 insert_Certificate[row['Certificate']] = True
                 loadFile.write(getQuery('Certificate', 'category', row['Certificate']))            
