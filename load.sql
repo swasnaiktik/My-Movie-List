@@ -1,10 +1,124 @@
+INSERT INTO Certificate(category) VALUES ('R');
+INSERT INTO Director(name) VALUES ('Quentin Tarantino');
+INSERT INTO Star(name) VALUES ('Uma Thurman');
+INSERT INTO Star(name) VALUES ('David Carradine');
+INSERT INTO Star(name) VALUES ('Daryl Hannah');
+INSERT INTO Star(name) VALUES ('Michael Madsen');
+INSERT INTO Genre(name) VALUES ('Action');
+INSERT INTO Genre(name) VALUES ('Crime');
+INSERT INTO Genre(name) VALUES ('Drama');
+INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
+            SELECT 'https://m.media-amazon.com/images/M/MV5BNzM3NDFhYTAtYmU5Mi00NGRmLTljYjgtMDkyODQ4MjNkMGY2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX67_CR0,0,67,98_AL_.jpg','Kill Bill: Vol. 1',2003,111,8.1,'After awakening from a four-year coma, a former assassin wreaks vengeance on the team of assassins who betrayed her.',69,1000639,70099045, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
+            FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
+            WHERE c.category = 'R' AND d.name = 'Quentin Tarantino' AND s1.name = 'Uma Thurman' AND s2.name = 'David Carradine' AND s3.name = 'Daryl Hannah' AND s4.name = 'Michael Madsen';
+INSERT INTO Certificate(category) VALUES ('U');
+INSERT INTO Director(name) VALUES ('Andrew Stanton');
+INSERT INTO Star(name) VALUES ('Lee Unkrich');
+INSERT INTO Star(name) VALUES ('Albert Brooks');
+INSERT INTO Star(name) VALUES ('Ellen DeGeneres');
+INSERT INTO Star(name) VALUES ('Alexander Gould');
+INSERT INTO Genre(name) VALUES ('Animation');
+INSERT INTO Genre(name) VALUES ('Adventure');
+INSERT INTO Genre(name) VALUES ('Comedy');
+INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
+            SELECT 'https://m.media-amazon.com/images/M/MV5BZTAzNWZlNmUtZDEzYi00ZjA5LWIwYjEtZGM1NWE1MjE4YWRhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX67_CR0,0,67,98_AL_.jpg','Finding Nemo',2003,100,8.1,'After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.',90,949565,380843261, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
+            FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
+            WHERE c.category = 'U' AND d.name = 'Andrew Stanton' AND s1.name = 'Lee Unkrich' AND s2.name = 'Albert Brooks' AND s3.name = 'Ellen DeGeneres' AND s4.name = 'Alexander Gould';
+INSERT INTO Certificate(category) VALUES ('UA');
+INSERT INTO Director(name) VALUES ('Bong Joon Ho');
+INSERT INTO Star(name) VALUES ('Kang-ho Song');
+INSERT INTO Star(name) VALUES ('Kim Sang-kyung');
+INSERT INTO Star(name) VALUES ('Roe-ha Kim');
+INSERT INTO Star(name) VALUES ('Jae-ho Song');
+INSERT INTO Genre(name) VALUES ('Mystery');
+INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
+            SELECT 'https://m.media-amazon.com/images/M/MV5BOGViNTg4YTktYTQ2Ni00MTU0LTk2NWUtMTI4OTc1YTM0NzQ2XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX67_CR0,0,67,98_AL_.jpg','Salinui chueok',2003,131,8.1,'In a small Korean province in 1986, two detectives struggle with the case of multiple young women being found raped and murdered by an unknown culprit.',82,139558,14131, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
+            FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
+            WHERE c.category = 'UA' AND d.name = 'Bong Joon Ho' AND s1.name = 'Kang-ho Song' AND s2.name = 'Kim Sang-kyung' AND s3.name = 'Roe-ha Kim' AND s4.name = 'Jae-ho Song';
+INSERT INTO Certificate(category) VALUES ('Unrated');
+INSERT INTO Director(name) VALUES ('Farhan Akhtar');
+INSERT INTO Star(name) VALUES ('Aamir Khan');
+INSERT INTO Star(name) VALUES ('Saif Ali Khan');
+INSERT INTO Star(name) VALUES ('Akshaye Khanna');
+INSERT INTO Star(name) VALUES ('Preity Zinta');
+INSERT INTO Genre(name) VALUES ('Romance');
+INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
+            SELECT 'https://m.media-amazon.com/images/M/MV5BMjRjMTYwMTYtMmRkNi00MmVkLWE0MjQtNmM3YjI0NWFhZDNmXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_UX67_CR0,0,67,98_AL_.jpg','Dil Chahta Hai',2001,183,8.1,'Three inseparable childhood friends are just out of college. Nothing comes between them - until they each fall in love, and their wildly different approaches to relationships creates tension.',NULL,66803,300000, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
+            FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
+            WHERE c.category = 'Unrated' AND d.name = 'Farhan Akhtar' AND s1.name = 'Aamir Khan' AND s2.name = 'Saif Ali Khan' AND s3.name = 'Akshaye Khanna' AND s4.name = 'Preity Zinta';
+INSERT INTO Director(name) VALUES ('Richard Linklater');
+INSERT INTO Star(name) VALUES ('Ethan Hawke');
+INSERT INTO Star(name) VALUES ('Julie Delpy');
+INSERT INTO Star(name) VALUES ('Vernon Dobtcheff');
+INSERT INTO Star(name) VALUES ('Louise Lemoine Torrès');
+INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
+            SELECT 'https://m.media-amazon.com/images/M/MV5BMTQ1MjAwNTM5Ml5BMl5BanBnXkFtZTYwNDM0MTc3._V1_UX67_CR0,0,67,98_AL_.jpg','Before Sunset',2004,80,8.1,'Nine years after Jesse and Celine first met, they encounter each other again on the French leg of Jesse''s book tour.',90,236311,5820649, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
+            FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
+            WHERE c.category = 'R' AND d.name = 'Richard Linklater' AND s1.name = 'Ethan Hawke' AND s2.name = 'Julie Delpy' AND s3.name = 'Vernon Dobtcheff' AND s4.name = 'Louise Lemoine Torrès';
+INSERT INTO Director(name) VALUES ('Rajkumar Hirani');
+INSERT INTO Star(name) VALUES ('Sanjay Dutt');
+INSERT INTO Star(name) VALUES ('Arshad Warsi');
+INSERT INTO Star(name) VALUES ('Gracy Singh');
+INSERT INTO Star(name) VALUES ('Sunil Dutt');
+INSERT INTO Genre(name) VALUES ('Musical');
+INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
+            SELECT 'https://m.media-amazon.com/images/M/MV5BMzQ4MTBlYTQtMzJkYS00OGNjLTk1MWYtNzQ0OTQ0OWEyOWU1XkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_UY98_CR1,0,67,98_AL_.jpg','Munna Bhai M.B.B.S.',2003,156,8.1,'A gangster sets out to fulfill his father''s dream of becoming a doctor.',NULL,73992,NULL, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
+            FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
+            WHERE c.category = 'U' AND d.name = 'Rajkumar Hirani' AND s1.name = 'Sanjay Dutt' AND s2.name = 'Arshad Warsi' AND s3.name = 'Gracy Singh' AND s4.name = 'Sunil Dutt';
 INSERT INTO Certificate(category) VALUES ('A');
+INSERT INTO Director(name) VALUES ('Steven Spielberg');
+INSERT INTO Star(name) VALUES ('Leonardo DiCaprio');
+INSERT INTO Star(name) VALUES ('Tom Hanks');
+INSERT INTO Star(name) VALUES ('Christopher Walken');
+INSERT INTO Star(name) VALUES ('Martin Sheen');
+INSERT INTO Genre(name) VALUES ('Biography');
+INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
+            SELECT 'https://m.media-amazon.com/images/M/MV5BMTY5MzYzNjc5NV5BMl5BanBnXkFtZTYwNTUyNTc2._V1_UX67_CR0,0,67,98_AL_.jpg','Catch Me If You Can',2002,141,8.1,'Barely 21 yet, Frank is a skilled forger who has passed as a doctor, lawyer and pilot. FBI agent Carl becomes obsessed with tracking down the con man, who only revels in the pursuit.',75,832846,164615351, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
+            FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
+            WHERE c.category = 'A' AND d.name = 'Steven Spielberg' AND s1.name = 'Leonardo DiCaprio' AND s2.name = 'Tom Hanks' AND s3.name = 'Christopher Walken' AND s4.name = 'Martin Sheen';
+INSERT INTO Director(name) VALUES ('Alejandro G. Iñárritu');
+INSERT INTO Star(name) VALUES ('Emilio Echevarría');
+INSERT INTO Star(name) VALUES ('Gael García Bernal');
+INSERT INTO Star(name) VALUES ('Goya Toledo');
+INSERT INTO Star(name) VALUES ('Álvaro Guerrero');
+INSERT INTO Genre(name) VALUES ('Thriller');
+INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
+            SELECT 'https://m.media-amazon.com/images/M/MV5BMjQxMWJhMzMtMzllZi00NzMwLTllYjktNTcwZmU4ZmU3NTA0XkEyXkFqcGdeQXVyMTAzMDM4MjM0._V1_UY98_CR3,0,67,98_AL_.jpg','Amores perros',2000,154,8.1,'A horrific car accident connects three stories, each involving characters dealing with loss, regret, and life''s harsh realities, all in the name of love.',83,223741,5383834, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
+            FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
+            WHERE c.category = 'A' AND d.name = 'Alejandro G. Iñárritu' AND s1.name = 'Emilio Echevarría' AND s2.name = 'Gael García Bernal' AND s3.name = 'Goya Toledo' AND s4.name = 'Álvaro Guerrero';
+INSERT INTO Director(name) VALUES ('Kaige Chen');
+INSERT INTO Star(name) VALUES ('Leslie Cheung');
+INSERT INTO Star(name) VALUES ('Fengyi Zhang');
+INSERT INTO Star(name) VALUES ('Gong Li');
+INSERT INTO Star(name) VALUES ('You Ge');
+INSERT INTO Genre(name) VALUES ('Music');
+INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
+            SELECT 'https://m.media-amazon.com/images/M/MV5BYmFhZmM3Y2MtNDA1Ny00NjkzLWJkM2EtYWU1ZjEwYmNjZDQ0XkEyXkFqcGdeQXVyMTMxMTY0OTQ@._V1_UX67_CR0,0,67,98_AL_.jpg','Ba wang bie ji',1993,171,8.1,'Two boys meet at an opera training school in Peking in 1924. Their resulting friendship will span nearly 70 years and will endure some of the most troublesome times in China''s history.',NULL,25088,5216888, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
+            FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
+            WHERE c.category = 'R' AND d.name = 'Kaige Chen' AND s1.name = 'Leslie Cheung' AND s2.name = 'Fengyi Zhang' AND s3.name = 'Gong Li' AND s4.name = 'You Ge';
+INSERT INTO Certificate(category) VALUES ('PG');
+INSERT INTO Director(name) VALUES ('Yimou Zhang');
+INSERT INTO Star(name) VALUES ('Jingwu Ma');
+INSERT INTO Star(name) VALUES ('Saifei He');
+INSERT INTO Star(name) VALUES ('Cuifen Cao');
+INSERT INTO Genre(name) VALUES ('History');
+INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
+            SELECT 'https://m.media-amazon.com/images/M/MV5BMjEzNjY5NDcwNV5BMl5BanBnXkFtZTcwNzEwMzg4NA@@._V1_UX67_CR0,0,67,98_AL_.jpg','Dà hóng denglong gaogao guà',1991,125,8.1,'A young woman becomes the fourth wife of a wealthy lord, and must learn to live with the strict rules and tensions within the household.',NULL,29662,2603061, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
+            FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
+            WHERE c.category = 'PG' AND d.name = 'Yimou Zhang' AND s1.name = 'Gong Li' AND s2.name = 'Jingwu Ma' AND s3.name = 'Saifei He' AND s4.name = 'Cuifen Cao';
+INSERT INTO Director(name) VALUES ('Peter Weir');
+INSERT INTO Star(name) VALUES ('Robin Williams');
+INSERT INTO Star(name) VALUES ('Robert Sean Leonard');
+INSERT INTO Star(name) VALUES ('Josh Charles');
+INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
+            SELECT 'https://m.media-amazon.com/images/M/MV5BOGYwYWNjMzgtNGU4ZC00NWQ2LWEwZjUtMzE1Zjc3NjY3YTU1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX67_CR0,0,67,98_AL_.jpg','Dead Poets Society',1989,128,8.1,'Maverick teacher John Keating uses poetry to embolden his boarding school students to new heights of self-expression.',79,425457,95860116, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
+            FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
+            WHERE c.category = 'U' AND d.name = 'Peter Weir' AND s1.name = 'Robin Williams' AND s2.name = 'Robert Sean Leonard' AND s3.name = 'Ethan Hawke' AND s4.name = 'Josh Charles';
 INSERT INTO Director(name) VALUES ('Frank Darabont');
 INSERT INTO Star(name) VALUES ('Tim Robbins');
 INSERT INTO Star(name) VALUES ('Morgan Freeman');
 INSERT INTO Star(name) VALUES ('Bob Gunton');
 INSERT INTO Star(name) VALUES ('William Sadler');
-INSERT INTO Genre(name) VALUES ('Drama');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
             SELECT 'https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX67_CR0,0,67,98_AL_.jpg','The Shawshank Redemption',1994,142,9.3,'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.',80,2343110,28341469, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
@@ -14,18 +128,15 @@ INSERT INTO Star(name) VALUES ('Marlon Brando');
 INSERT INTO Star(name) VALUES ('Al Pacino');
 INSERT INTO Star(name) VALUES ('James Caan');
 INSERT INTO Star(name) VALUES ('Diane Keaton');
-INSERT INTO Genre(name) VALUES ('Crime');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
             SELECT 'https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY98_CR1,0,67,98_AL_.jpg','The Godfather',1972,175,9.2,'An organized crime dynasty''s aging patriarch transfers control of his clandestine empire to his reluctant son.',100,1620367,134966411, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'A' AND d.name = 'Francis Ford Coppola' AND s1.name = 'Marlon Brando' AND s2.name = 'Al Pacino' AND s3.name = 'James Caan' AND s4.name = 'Diane Keaton';
-INSERT INTO Certificate(category) VALUES ('UA');
 INSERT INTO Director(name) VALUES ('Christopher Nolan');
 INSERT INTO Star(name) VALUES ('Christian Bale');
 INSERT INTO Star(name) VALUES ('Heath Ledger');
 INSERT INTO Star(name) VALUES ('Aaron Eckhart');
 INSERT INTO Star(name) VALUES ('Michael Caine');
-INSERT INTO Genre(name) VALUES ('Action');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
             SELECT 'https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_UX67_CR0,0,67,98_AL_.jpg','The Dark Knight',2008,152,9.0,'When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.',84,2303232,534858444, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
@@ -36,7 +147,6 @@ INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_sc
             SELECT 'https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY98_CR1,0,67,98_AL_.jpg','The Godfather: Part II',1974,202,9.0,'The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.',90,1129952,57300000, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'A' AND d.name = 'Francis Ford Coppola' AND s1.name = 'Al Pacino' AND s2.name = 'Robert De Niro' AND s3.name = 'Robert Duvall' AND s4.name = 'Diane Keaton';
-INSERT INTO Certificate(category) VALUES ('U');
 INSERT INTO Director(name) VALUES ('Sidney Lumet');
 INSERT INTO Star(name) VALUES ('Henry Fonda');
 INSERT INTO Star(name) VALUES ('Lee J. Cobb');
@@ -51,32 +161,25 @@ INSERT INTO Star(name) VALUES ('Elijah Wood');
 INSERT INTO Star(name) VALUES ('Viggo Mortensen');
 INSERT INTO Star(name) VALUES ('Ian McKellen');
 INSERT INTO Star(name) VALUES ('Orlando Bloom');
-INSERT INTO Genre(name) VALUES ('Adventure');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
             SELECT 'https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX67_CR0,0,67,98_AL_.jpg','The Lord of the Rings: The Return of the King',2003,201,8.9,'Gandalf and Aragorn lead the World of Men against Sauron''s army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.',94,1642758,377845905, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'U' AND d.name = 'Peter Jackson' AND s1.name = 'Elijah Wood' AND s2.name = 'Viggo Mortensen' AND s3.name = 'Ian McKellen' AND s4.name = 'Orlando Bloom';
-INSERT INTO Director(name) VALUES ('Quentin Tarantino');
 INSERT INTO Star(name) VALUES ('John Travolta');
-INSERT INTO Star(name) VALUES ('Uma Thurman');
 INSERT INTO Star(name) VALUES ('Samuel L. Jackson');
 INSERT INTO Star(name) VALUES ('Bruce Willis');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
             SELECT 'https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY98_CR0,0,67,98_AL_.jpg','Pulp Fiction',1994,154,8.9,'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.',94,1826188,107928762, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'A' AND d.name = 'Quentin Tarantino' AND s1.name = 'John Travolta' AND s2.name = 'Uma Thurman' AND s3.name = 'Samuel L. Jackson' AND s4.name = 'Bruce Willis';
-INSERT INTO Director(name) VALUES ('Steven Spielberg');
 INSERT INTO Star(name) VALUES ('Liam Neeson');
 INSERT INTO Star(name) VALUES ('Ralph Fiennes');
 INSERT INTO Star(name) VALUES ('Ben Kingsley');
 INSERT INTO Star(name) VALUES ('Caroline Goodall');
-INSERT INTO Genre(name) VALUES ('Biography');
-INSERT INTO Genre(name) VALUES ('History');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
             SELECT 'https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX67_CR0,0,67,98_AL_.jpg','Schindler''s List',1993,195,8.9,'In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.',94,1213505,96898818, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'A' AND d.name = 'Steven Spielberg' AND s1.name = 'Liam Neeson' AND s2.name = 'Ralph Fiennes' AND s3.name = 'Ben Kingsley' AND s4.name = 'Caroline Goodall';
-INSERT INTO Star(name) VALUES ('Leonardo DiCaprio');
 INSERT INTO Star(name) VALUES ('Joseph Gordon-Levitt');
 INSERT INTO Star(name) VALUES ('Elliot Page');
 INSERT INTO Star(name) VALUES ('Ken Watanabe');
@@ -100,11 +203,9 @@ INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_sc
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'U' AND d.name = 'Peter Jackson' AND s1.name = 'Elijah Wood' AND s2.name = 'Ian McKellen' AND s3.name = 'Orlando Bloom' AND s4.name = 'Sean Bean';
 INSERT INTO Director(name) VALUES ('Robert Zemeckis');
-INSERT INTO Star(name) VALUES ('Tom Hanks');
 INSERT INTO Star(name) VALUES ('Robin Wright');
 INSERT INTO Star(name) VALUES ('Gary Sinise');
 INSERT INTO Star(name) VALUES ('Sally Field');
-INSERT INTO Genre(name) VALUES ('Romance');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
             SELECT 'https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UY98_CR0,0,67,98_AL_.jpg','Forrest Gump',1994,142,8.8,'The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate and other historical events unfold through the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.',82,1809221,330252182, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
@@ -169,13 +270,9 @@ INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_sc
             SELECT 'https://m.media-amazon.com/images/M/MV5BNjViNWRjYWEtZTI0NC00N2E3LTk0NGQtMjY4NTM3OGNkZjY0XkEyXkFqcGdeQXVyMjUxMTY3ODM@._V1_UX67_CR0,0,67,98_AL_.jpg','Hamilton',2020,160,8.6,'The real life of one of America''s foremost founding fathers and first Secretary of the Treasury, Alexander Hamilton. Captured live on Broadway from the Richard Rodgers Theater with the original Broadway cast.',90,55291,NULL, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'PG-13' AND d.name = 'Thomas Kail' AND s1.name = 'Lin-Manuel Miranda' AND s2.name = 'Phillipa Soo' AND s3.name = 'Leslie Odom Jr.' AND s4.name = 'Renée Elise Goldsberry';
-INSERT INTO Director(name) VALUES ('Bong Joon Ho');
-INSERT INTO Star(name) VALUES ('Kang-ho Song');
 INSERT INTO Star(name) VALUES ('Lee Sun-kyun');
 INSERT INTO Star(name) VALUES ('Cho Yeo-jeong');
 INSERT INTO Star(name) VALUES ('Choi Woo-sik');
-INSERT INTO Genre(name) VALUES ('Comedy');
-INSERT INTO Genre(name) VALUES ('Thriller');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
             SELECT 'https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_UX67_CR0,0,67,98_AL_.jpg','Gisaengchung',2019,132,8.6,'Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.',96,552778,53367844, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
@@ -211,13 +308,11 @@ INSERT INTO Star(name) VALUES ('Daveigh Chase');
 INSERT INTO Star(name) VALUES ('Suzanne Pleshette');
 INSERT INTO Star(name) VALUES ('Miyu Irino');
 INSERT INTO Star(name) VALUES ('Rumi Hiiragi');
-INSERT INTO Genre(name) VALUES ('Animation');
 INSERT INTO Genre(name) VALUES ('Family');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
             SELECT 'https://m.media-amazon.com/images/M/MV5BMjlmZmI5MDctNDE2YS00YWE0LWE5ZWItZDBhYWQ0NTcxNWRhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX67_CR0,0,67,98_AL_.jpg','Sen to Chihiro no kamikakushi',2001,125,8.6,'During her family''s move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.',96,651376,10055859, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'U' AND d.name = 'Hayao Miyazaki' AND s1.name = 'Daveigh Chase' AND s2.name = 'Suzanne Pleshette' AND s3.name = 'Miyu Irino' AND s4.name = 'Rumi Hiiragi';
-INSERT INTO Certificate(category) VALUES ('R');
 INSERT INTO Star(name) VALUES ('Matt Damon');
 INSERT INTO Star(name) VALUES ('Tom Sizemore');
 INSERT INTO Star(name) VALUES ('Edward Burns');
@@ -244,7 +339,6 @@ INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_sc
             WHERE c.category = 'U' AND d.name = 'Roberto Benigni' AND s1.name = 'Roberto Benigni' AND s2.name = 'Nicoletta Braschi' AND s3.name = 'Giorgio Cantarini' AND s4.name = 'Giustino Durano';
 INSERT INTO Star(name) VALUES ('Kevin Spacey');
 INSERT INTO Star(name) VALUES ('Andrew Kevin Walker');
-INSERT INTO Genre(name) VALUES ('Mystery');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
             SELECT 'https://m.media-amazon.com/images/M/MV5BOTUwODM5MTctZjczMi00OTk4LTg3NWUtNmVhMTAzNTNjYjcyXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX67_CR0,0,67,98_AL_.jpg','Se7en',1995,127,8.6,'Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.',65,1445096,100125643, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
@@ -282,7 +376,6 @@ INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_sc
             SELECT 'https://m.media-amazon.com/images/M/MV5BOWE4ZDdhNmMtNzE5ZC00NzExLTlhNGMtY2ZhYjYzODEzODA1XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UY98_CR1,0,67,98_AL_.jpg','Shichinin no samurai',1954,207,8.6,'A poor village under attack by bandits recruits seven unemployed samurai to help them defend themselves.',98,315744,269061, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'U' AND d.name = 'Akira Kurosawa' AND s1.name = 'Toshirô Mifune' AND s2.name = 'Takashi Shimura' AND s3.name = 'Keiko Tsushima' AND s4.name = 'Yukiko Shimazaki';
-INSERT INTO Certificate(category) VALUES ('PG');
 INSERT INTO Director(name) VALUES ('Frank Capra');
 INSERT INTO Star(name) VALUES ('James Stewart');
 INSERT INTO Star(name) VALUES ('Donna Reed');
@@ -305,7 +398,6 @@ INSERT INTO Star(name) VALUES ('Miles Teller');
 INSERT INTO Star(name) VALUES ('J.K. Simmons');
 INSERT INTO Star(name) VALUES ('Melissa Benoist');
 INSERT INTO Star(name) VALUES ('Paul Reiser');
-INSERT INTO Genre(name) VALUES ('Music');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
             SELECT 'https://m.media-amazon.com/images/M/MV5BOTA5NDZlZGUtMjAxOS00YTRkLTkwYmMtYWQ0NWEwZDZiNjEzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX67_CR0,0,67,98_AL_.jpg','Whiplash',2014,106,8.5,'A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student''s potential.',88,717585,13092000, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
@@ -494,7 +586,6 @@ INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_sc
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'U' AND d.name = 'Makoto Shinkai' AND s1.name = 'Ryûnosuke Kamiki' AND s2.name = 'Mone Kamishiraishi' AND s3.name = 'Ryô Narita' AND s4.name = 'Aoi Yûki';
 INSERT INTO Director(name) VALUES ('Nitesh Tiwari');
-INSERT INTO Star(name) VALUES ('Aamir Khan');
 INSERT INTO Star(name) VALUES ('Sakshi Tanwar');
 INSERT INTO Star(name) VALUES ('Fatima Sana Shaikh');
 INSERT INTO Star(name) VALUES ('Sanya Malhotra');
@@ -528,7 +619,6 @@ INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_sc
 INSERT INTO Director(name) VALUES ('Lee Unkrich');
 INSERT INTO Star(name) VALUES ('Adrian Molina');
 INSERT INTO Star(name) VALUES ('Anthony Gonzalez');
-INSERT INTO Star(name) VALUES ('Gael García Bernal');
 INSERT INTO Star(name) VALUES ('Benjamin Bratt');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
             SELECT 'https://m.media-amazon.com/images/M/MV5BYjQ5NjM0Y2YtNjZkNC00ZDhkLWJjMWItN2QyNzFkMDE3ZjAxXkEyXkFqcGdeQXVyODIxMzk5NjA@._V1_UY98_CR1,0,67,98_AL_.jpg','Coco',2017,105,8.4,'Aspiring musician Miguel, confronted with his family''s ancestral ban on music, enters the Land of the Dead to find his great-great-grandfather, a legendary singer.',81,384171,209726015, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
@@ -546,7 +636,6 @@ INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_sc
             SELECT 'https://m.media-amazon.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_UX67_CR0,0,67,98_AL_.jpg','The Dark Knight Rises',2012,164,8.4,'Eight years after the Joker''s reign of anarchy, Batman, with the help of the enigmatic Catwoman, is forced from his exile to save Gotham City from the brutal guerrilla terrorist Bane.',78,1516346,448139099, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'UA' AND d.name = 'Christopher Nolan' AND s1.name = 'Christian Bale' AND s2.name = 'Tom Hardy' AND s3.name = 'Anne Hathaway' AND s4.name = 'Gary Oldman';
-INSERT INTO Director(name) VALUES ('Rajkumar Hirani');
 INSERT INTO Star(name) VALUES ('Mona Singh');
 INSERT INTO Star(name) VALUES ('Sharman Joshi');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
@@ -561,7 +650,6 @@ INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_sc
             SELECT 'https://m.media-amazon.com/images/M/MV5BMDhjZWViN2MtNzgxOS00NmI4LThiZDQtZDI3MzM4MDE4NTc0XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY98_CR1,0,67,98_AL_.jpg','Taare Zameen Par',2007,165,8.4,'An eight-year-old boy is thought to be a lazy trouble-maker, until the new art teacher has the patience and compassion to discover the real problem behind his struggles in school.',NULL,168895,1223869, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'U' AND d.name = 'Aamir Khan' AND s1.name = 'Amole Gupte' AND s2.name = 'Darsheel Safary' AND s3.name = 'Aamir Khan' AND s4.name = 'Tisca Chopra';
-INSERT INTO Director(name) VALUES ('Andrew Stanton');
 INSERT INTO Star(name) VALUES ('Ben Burtt');
 INSERT INTO Star(name) VALUES ('Elissa Knight');
 INSERT INTO Star(name) VALUES ('Jeff Garlin');
@@ -625,7 +713,6 @@ INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_sc
             SELECT 'https://m.media-amazon.com/images/M/MV5BZWFlYmY2MGEtZjVkYS00YzU4LTg0YjQtYzY1ZGE3NTA5NGQxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX67_CR0,0,67,98_AL_.jpg','The Shining',1980,146,8.4,'A family heads to an isolated hotel for the winter where a sinister presence influences the father into violence, while his psychic son sees horrific forebodings from both past and future.',66,898237,44017374, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'A' AND d.name = 'Stanley Kubrick' AND s1.name = 'Jack Nicholson' AND s2.name = 'Shelley Duvall' AND s3.name = 'Danny Lloyd' AND s4.name = 'Scatman Crothers';
-INSERT INTO Star(name) VALUES ('Martin Sheen');
 INSERT INTO Star(name) VALUES ('Frederic Forrest');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
             SELECT 'https://m.media-amazon.com/images/M/MV5BMDdhODg0MjYtYzBiOS00ZmI5LWEwZGYtZDEyNDU4MmQyNzFkXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX67_CR0,0,67,98_AL_.jpg','Apocalypse Now',1979,147,8.4,'A U.S. Army officer serving in Vietnam is tasked with assassinating a renegade Special Forces Colonel who sees himself as a god.',94,606398,83471511, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
@@ -644,7 +731,6 @@ INSERT INTO Star(name) VALUES ('Rajesh Khanna');
 INSERT INTO Star(name) VALUES ('Amitabh Bachchan');
 INSERT INTO Star(name) VALUES ('Sumita Sanyal');
 INSERT INTO Star(name) VALUES ('Ramesh Deo');
-INSERT INTO Genre(name) VALUES ('Musical');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
             SELECT 'https://m.media-amazon.com/images/M/MV5BYmYzNmM2MDctZGY3Yi00NjRiLWIxZjctYjgzYTcxYTNhYTMyXkEyXkFqcGdeQXVyMjUxMTY3ODM@._V1_UY98_CR1,0,67,98_AL_.jpg','Anand',1971,122,8.4,'The story of a terminally ill man who wishes to live life to the fullest before the inevitable occurs, as told by his best friend.',NULL,30273,NULL, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
@@ -834,7 +920,6 @@ INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_sc
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'UA' AND d.name = 'Sam Mendes' AND s1.name = 'Kevin Spacey' AND s2.name = 'Annette Bening' AND s3.name = 'Thora Birch' AND s4.name = 'Wes Bentley';
 INSERT INTO Director(name) VALUES ('Gus Van Sant');
-INSERT INTO Star(name) VALUES ('Robin Williams');
 INSERT INTO Star(name) VALUES ('Ben Affleck');
 INSERT INTO Star(name) VALUES ('Stellan Skarsgård');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
@@ -870,7 +955,6 @@ INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_sc
             WHERE c.category = 'A' AND d.name = 'Mel Gibson' AND s1.name = 'Mel Gibson' AND s2.name = 'Sophie Marceau' AND s3.name = 'Patrick McGoohan' AND s4.name = 'Angus Macfadyen';
 INSERT INTO Star(name) VALUES ('Harvey Keitel');
 INSERT INTO Star(name) VALUES ('Tim Roth');
-INSERT INTO Star(name) VALUES ('Michael Madsen');
 INSERT INTO Star(name) VALUES ('Chris Penn');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
             SELECT 'https://m.media-amazon.com/images/M/MV5BZmExNmEwYWItYmQzOS00YjA5LTk2MjktZjEyZDE1Y2QxNjA1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX67_CR0,0,67,98_AL_.jpg','Reservoir Dogs',1992,99,8.3,'When a simple jewelry heist goes horribly wrong, the surviving criminals begin to suspect that one of them is a police informant.',79,918562,2832029, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
@@ -930,7 +1014,6 @@ INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_sc
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'R' AND d.name = 'Wolfgang Petersen' AND s1.name = 'Jürgen Prochnow' AND s2.name = 'Herbert Grönemeyer' AND s3.name = 'Klaus Wennemann' AND s4.name = 'Hubertus Bengsch';
 INSERT INTO Star(name) VALUES ('Cybill Shepherd');
-INSERT INTO Star(name) VALUES ('Albert Brooks');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
             SELECT 'https://m.media-amazon.com/images/M/MV5BM2M1MmVhNDgtNmI0YS00ZDNmLTkyNjctNTJiYTQ2N2NmYzc2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX67_CR0,0,67,98_AL_.jpg','Taxi Driver',1976,114,8.3,'A mentally unstable veteran works as a nighttime taxi driver in New York City, where the perceived decadence and sleaze fuels his urge for violent action by attempting to liberate a presidential campaign worker and an underage prostitute.',94,724636,28262574, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
@@ -1687,7 +1770,6 @@ INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_sc
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE d.name = 'Nuri Bilge Ceylan' AND s1.name = 'Haluk Bilginer' AND s2.name = 'Melisa Sözen' AND s3.name = 'Demet Akbag' AND s4.name = 'Ayberk Pekcan';
 INSERT INTO Star(name) VALUES ('Anushka Sharma');
-INSERT INTO Star(name) VALUES ('Sanjay Dutt');
 INSERT INTO Star(name) VALUES ('Boman Irani');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
             SELECT 'https://m.media-amazon.com/images/M/MV5BMTYzOTE2NjkxN15BMl5BanBnXkFtZTgwMDgzMTg0MzE@._V1_UY98_CR0,0,67,98_AL_.jpg','PK',2014,153,8.1,'An alien on Earth loses the only device he can use to communicate with his spaceship. His innocent nature and child-like questions force the country to evaluate the impact of religion on its people.',NULL,163061,10616104, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
@@ -1894,7 +1976,6 @@ INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_sc
             SELECT 'https://m.media-amazon.com/images/M/MV5BMjA5Njk3MjM4OV5BMl5BanBnXkFtZTcwMTc5MTE1MQ@@._V1_UX67_CR0,0,67,98_AL_.jpg','No Country for Old Men',2007,122,8.1,'Violence and mayhem ensue after a hunter stumbles upon a drug deal gone wrong and more than two million dollars in cash near the Rio Grande.',91,856916,74283625, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'R' AND d.name = 'Ethan Coen' AND s1.name = 'Joel Coen' AND s2.name = 'Tommy Lee Jones' AND s3.name = 'Javier Bardem' AND s4.name = 'Josh Brolin';
-INSERT INTO Star(name) VALUES ('Arshad Warsi');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
             SELECT 'https://m.media-amazon.com/images/M/MV5BN2ZmMDMwODgtMzA5MS00MGU0LWEyYTgtYzQ5MmQzMzU2NTVkXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_UY98_CR0,0,67,98_AL_.jpg','Lage Raho Munna Bhai',2006,144,8.1,'Munna Bhai embarks on a journey with Mahatma Gandhi in order to fight against a corrupt property dealer.',NULL,43137,2217561, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
@@ -1922,7 +2003,6 @@ INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_sc
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'R' AND d.name = 'Je-kyu Kang' AND s1.name = 'Jang Dong-Gun' AND s2.name = 'Won Bin' AND s3.name = 'Eun-ju Lee' AND s4.name = 'Hyeong-jin Kong';
 INSERT INTO Star(name) VALUES ('David Silverman');
-INSERT INTO Star(name) VALUES ('Lee Unkrich');
 INSERT INTO Star(name) VALUES ('Billy Crystal');
 INSERT INTO Star(name) VALUES ('John Goodman');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
@@ -1939,7 +2019,6 @@ INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_sc
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'UA' AND d.name = 'Hideaki Anno' AND s1.name = 'Kazuya Tsurumaki' AND s2.name = 'Megumi Ogata' AND s3.name = 'Megumi Hayashibara' AND s4.name = 'Yûko Miyamura';
 INSERT INTO Star(name) VALUES ('Raghuvir Yadav');
-INSERT INTO Star(name) VALUES ('Gracy Singh');
 INSERT INTO Star(name) VALUES ('Rachel Shelley');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
             SELECT 'https://m.media-amazon.com/images/M/MV5BNDYxNWUzZmYtOGQxMC00MTdkLTkxOTctYzkyOGIwNWQxZjhmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX67_CR0,0,67,98_AL_.jpg','Lagaan: Once Upon a Time in India',2001,224,8.1,'The people of a small village in Victorian India stake their future on a game of cricket against their ruthless British rulers.',84,105036,70147, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
@@ -1959,7 +2038,6 @@ INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_sc
             SELECT 'https://m.media-amazon.com/images/M/MV5BMzIwOTdmNjQtOWQ1ZS00ZWQ4LWIxYTMtOWFkM2NjODJiMGY4L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTI4MjkwNjA@._V1_UX67_CR0,0,67,98_AL_.jpg','La leggenda del pianista sull''oceano',1998,169,8.1,'A baby boy, discovered in 1900 on an ocean liner, grows into a musical prodigy, never setting foot on land.',58,59020,259127, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'U' AND d.name = 'Giuseppe Tornatore' AND s1.name = 'Tim Roth' AND s2.name = 'Pruitt Taylor Vince' AND s3.name = 'Mélanie Thierry' AND s4.name = 'Bill Nunn';
-INSERT INTO Director(name) VALUES ('Peter Weir');
 INSERT INTO Star(name) VALUES ('Laura Linney');
 INSERT INTO Star(name) VALUES ('Noah Emmerich');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
@@ -2031,9 +2109,6 @@ INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_sc
             SELECT 'https://m.media-amazon.com/images/M/MV5BYmNjYzRlM2YtZTZjZC00ODVmLTljZWMtODg1YmYyNDBiNzU3XkEyXkFqcGdeQXVyNTkzNDQ4ODc@._V1_UY98_CR3,0,67,98_AL_.jpg','Dilwale Dulhania Le Jayenge',1995,189,8.1,'When Raj meets Simran in Europe, it isn''t love at first sight but when Simran moves to India for an arranged marriage, love makes its presence felt.',NULL,63516,NULL, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'U' AND d.name = 'Aditya Chopra' AND s1.name = 'Shah Rukh Khan' AND s2.name = 'Kajol' AND s3.name = 'Amrish Puri' AND s4.name = 'Farida Jalal';
-INSERT INTO Director(name) VALUES ('Richard Linklater');
-INSERT INTO Star(name) VALUES ('Ethan Hawke');
-INSERT INTO Star(name) VALUES ('Julie Delpy');
 INSERT INTO Star(name) VALUES ('Andrea Eckert');
 INSERT INTO Star(name) VALUES ('Hanno Pöschl');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
@@ -2161,7 +2236,6 @@ INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_sc
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'R' AND d.name = 'Terry Jones' AND s1.name = 'Graham Chapman' AND s2.name = 'John Cleese' AND s3.name = 'Michael Palin' AND s4.name = 'Terry Gilliam';
 INSERT INTO Director(name) VALUES ('Michael Cimino');
-INSERT INTO Star(name) VALUES ('Christopher Walken');
 INSERT INTO Star(name) VALUES ('John Cazale');
 INSERT INTO Star(name) VALUES ('John Savage');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
@@ -2645,7 +2719,6 @@ INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_sc
             SELECT 'https://m.media-amazon.com/images/M/MV5BMTA2NDc3Njg5NDVeQTJeQWpwZ15BbWU4MDc1NDcxNTUz._V1_UX67_CR0,0,67,98_AL_.jpg','Bohemian Rhapsody',2018,134,8.0,'The story of the legendary British rock band Queen and lead singer Freddie Mercury, leading up to their famous performance at Live Aid (1985).',49,450349,216428042, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'UA' AND d.name = 'Bryan Singer' AND s1.name = 'Rami Malek' AND s2.name = 'Lucy Boynton' AND s3.name = 'Gwilym Lee' AND s4.name = 'Ben Hardy';
-INSERT INTO Director(name) VALUES ('Alejandro G. Iñárritu');
 INSERT INTO Star(name) VALUES ('Will Poulter');
 INSERT INTO Star(name) VALUES ('Domhnall Gleeson');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
@@ -2845,8 +2918,6 @@ INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_sc
             SELECT 'https://m.media-amazon.com/images/M/MV5BMDI5ZWJhOWItYTlhOC00YWNhLTlkNzctNDU5YTI1M2E1MWZhXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_UX67_CR0,0,67,98_AL_.jpg','Casino Royale',2006,144,8.0,'After earning 00 status and a licence to kill, Secret Agent James Bond sets out on his first mission as 007. Bond must defeat a private banker funding terrorists in a high-stakes game of poker at Casino Royale, Montenegro.',80,582239,167445960, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'PG-13' AND d.name = 'Martin Campbell' AND s1.name = 'Daniel Craig' AND s2.name = 'Eva Green' AND s3.name = 'Judi Dench' AND s4.name = 'Jeffrey Wright';
-INSERT INTO Star(name) VALUES ('David Carradine');
-INSERT INTO Star(name) VALUES ('Daryl Hannah');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
             SELECT 'https://m.media-amazon.com/images/M/MV5BNmFiYmJmN2QtNWQwMi00MzliLThiOWMtZjQxNGRhZTQ1MjgyXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_UX67_CR0,0,67,98_AL_.jpg','Kill Bill: Vol. 2',2004,137,8.0,'The Bride continues her quest of vengeance against her former boss and lover Bill, the reclusive bouncer Budd, and the treacherous, one-eyed Elle.',83,683900,66208183, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
@@ -2884,8 +2955,6 @@ INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_sc
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'UA' AND d.name = 'Ron Howard' AND s1.name = 'Russell Crowe' AND s2.name = 'Renée Zellweger' AND s3.name = 'Craig Bierko' AND s4.name = 'Paul Giamatti';
 INSERT INTO Director(name) VALUES ('Nikkhil Advani');
-INSERT INTO Star(name) VALUES ('Preity Zinta');
-INSERT INTO Star(name) VALUES ('Saif Ali Khan');
 INSERT INTO Star(name) VALUES ('Jaya Bachchan');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)
             SELECT 'https://m.media-amazon.com/images/M/MV5BYmVjNDIxODAtNWZiZi00ZDBlLWJmOTUtNDNjMGExNTViMzE1XkEyXkFqcGdeQXVyNTE0MDc0NTM@._V1_UX67_CR0,0,67,98_AL_.jpg','Kal Ho Naa Ho',2003,186,8.0,'Naina, an introverted, perpetually depressed girl''s life changes when she meets Aman. But Aman has a secret of his own which changes their lives forever. Embroiled in all this is Rohit, Naina''s best friend who conceals his love for her.',54,63460,1787378, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
@@ -3861,7 +3930,6 @@ INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_sc
             SELECT 'https://m.media-amazon.com/images/M/MV5BMTY4NTIwODg0N15BMl5BanBnXkFtZTcwOTc0MjEzMw@@._V1_UX67_CR0,0,67,98_AL_.jpg','Harry Potter and the Prisoner of Azkaban',2004,142,7.9,'Harry Potter, Ron and Hermione return to Hogwarts School of Witchcraft and Wizardry for their third year of study, where they delve into the mystery surrounding an escaped prisoner who poses a dangerous threat to the young wizard.',82,552493,249358727, c.id, 1, d.id, s1.id,s2.id,s3.id,s4.id
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4
             WHERE c.category = 'U' AND d.name = 'Alfonso Cuarón' AND s1.name = 'Daniel Radcliffe' AND s2.name = 'Emma Watson' AND s3.name = 'Rupert Grint' AND s4.name = 'Richard Griffiths';
-INSERT INTO Director(name) VALUES ('Yimou Zhang');
 INSERT INTO Star(name) VALUES ('Jet Li');
 INSERT INTO Star(name) VALUES ('Ziyi Zhang');
 INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)

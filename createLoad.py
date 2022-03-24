@@ -6,7 +6,7 @@ insert_Certificate = {}
 insert_Genre = {}
 
 def validate(value, type='s'):
-    if value == '':
+    if value == '' or not value:
         return 'NULL'
     
     value = value.replace("'", "''")
@@ -67,13 +67,14 @@ def getIMDBQuery(row):
             SELECT {validate(row['Poster_Link'])},{validate(row['Series_Title'])},{validate(row['Released_Year'], 'i')},{validate(row['Runtime'], 'i')},{validate(row['IMDB_Rating'], 'f')},{validate(row['Overview'])},{validate(row['Meta_score'], 'i')},{validate(row['No_of_Votes'], 'i')},{validate(row['Gross'], 'i')}, {cid}, 1, {did}, {s1id},{s2id},{s3id},{s4id}\n\
             FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4\n\
             WHERE {category_str};\n"
-
     return query
+
 with open('./load.sql', 'a', encoding='utf-8') as loadFile:
 
     with open('./Data/imdb_top_1000.csv', encoding="utf-8") as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
+            print(row)
             if (not insert_Certificate.get(row['Certificate'], False)) and row['Certificate'] != '' :
                 insert_Certificate[row['Certificate']] = True
                 loadFile.write(getQuery('Certificate', 'category', row['Certificate']))            
