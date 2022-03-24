@@ -31,7 +31,7 @@ def getIMDBQuery(row):
         cid = 'NULL'
 
     if row['Director'] != '':
-        did = 'c.id'
+        did = 'd.id'
         category_str+=f"d.name = {validate(row['Director'])} AND "
     else: 
         did = 'NULL'
@@ -65,7 +65,7 @@ def getIMDBQuery(row):
 
     query = f"INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)\n\
             SELECT {validate(row['Poster_Link'])},{validate(row['Series_Title'])},{validate(row['Released_Year'], 'i')},{validate(row['Runtime'], 'i')},{validate(row['IMDB_Rating'], 'f')},{validate(row['Overview'])},{validate(row['Meta_score'], 'i')},{validate(row['No_of_Votes'], 'i')},{validate(row['Gross'], 'i')}, {cid}, 1, {did}, {s1id},{s2id},{s3id},{s4id}\n\
-            FROM Certificate c, Director d, Star s1 s2 s3 s4\n\
+            FROM Certificate c, Director d, Star s1, Star s2, Star s3, Star s4\n\
             WHERE {category_str};\n"
 
     return query
@@ -75,7 +75,7 @@ with open('./load.sql', 'a', encoding='utf-8') as loadFile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             if (not insert_Certificate.get(row['Certificate'], False)) and row['Certificate'] != '' :
-                insert_Director[row['Certificate']] = True
+                insert_Certificate[row['Certificate']] = True
                 loadFile.write(getQuery('Certificate', 'category', row['Certificate']))            
 
             if (not insert_Director.get(row['Director'], False)) and row['Director'] != '' :
