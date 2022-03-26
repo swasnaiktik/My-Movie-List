@@ -44,6 +44,12 @@ CREATE TABLE IMDB (
 	star_4		integer REFERENCES Star(id) ON DELETE SET NULL
 );
 
+CREATE TABLE Movie_Genre(
+	id			SERIAL integer PRIMARY KEY,
+	id_movie	integer REFERENCES IMDB(id) ON DELETE CASCADE,
+	id_genre	integer REFERENCES Genre(id) ON DELETE CASCADE
+);
+
 CREATE TABLE Wishlist(
 	id			SERIAL integer PRIMARY KEY,
 	id_movie	integer REFERENCES IMDB(id) ON DELETE CASCADE,
