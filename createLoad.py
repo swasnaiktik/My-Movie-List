@@ -84,12 +84,11 @@ def getMovieGenreQuery(row, genre):
 
     query = f"INSERT INTO Movie_Genre(id_movie, id_genre)\n\
             SELECT m.id, g.id FROM IMDB m, Genre g WHERE\n\
-            m.title = {row['Series_Title']} AND g.name = {genre};\n"
+            m.title = {validate(row['Series_Title'])} AND g.name = {validate(genre)};\n"
     
     return query
 
 if __name__ == '__main__':
-
     with open('./load.sql', 'a', encoding='utf-8') as loadFile:
 
         with open('./Data/imdb_top_1000.csv', encoding="utf-8") as csvfile:
