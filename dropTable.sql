@@ -1,0 +1,11 @@
+DROP TABLE Likes;
+DROP TABLE Dislikes;
+DROP TABLE Watched;
+DROP TABLE Wishlist;
+DROP TABLE Movie_Genre;
+DROP TABLE Imdb;
+DROP TABLE Director;
+DROP TABLE Genre;
+DROP TABLE Star;
+DROP TABLE Certificate;
+DROP TABLE Fan;

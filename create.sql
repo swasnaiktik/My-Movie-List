@@ -1,37 +1,37 @@
 CREATE TABLE Genre (
-	id			SERIAL integer PRIMARY KEY,
-	name		char(100)
+	id			SERIAL PRIMARY KEY,
+	name		varchar(100)
 );
 
 CREATE TABLE Director (
-	id			SERIAL integer PRIMARY KEY,
-	name		char(100)
+	id			SERIAL PRIMARY KEY,
+	name		varchar(100)
 );
 
 CREATE TABLE Star (
-	id			SERIAL integer PRIMARY KEY,
-	name		char(100)
+	id			SERIAL PRIMARY KEY,
+	name		varchar(100)
 );
 
 CREATE TABLE Certificate (
-	id			SERIAL integer PRIMARY KEY,
-	category		char(100)
+	id			SERIAL PRIMARY KEY,
+	category		varchar(100)
 );
 
 CREATE TABLE Fan (
-	id			SERIAL integer PRIMARY KEY,
-	name		char(50),
+	id			SERIAL PRIMARY KEY,
+	name		varchar(50),
 	age			integer
 );
 
 CREATE TABLE IMDB (
-	id			SERIAL integer PRIMARY KEY,
-	poster_link	char(200),
-	title		char(200),
+	id			SERIAL PRIMARY KEY,
+	poster_link	varchar(200),
+	title		varchar(200),
 	release		integer,
 	length		integer,
-	rating		numeric(1,1),
-	overview	char(500),
+	rating		numeric(2,1),
+	overview	varchar(500),
 	meta_score	integer,
 	total_votes	integer,
 	gross		integer,
@@ -45,32 +45,33 @@ CREATE TABLE IMDB (
 );
 
 CREATE TABLE Movie_Genre(
-	id			SERIAL integer PRIMARY KEY,
+	id			SERIAL PRIMARY KEY,
 	id_movie	integer REFERENCES IMDB(id) ON DELETE CASCADE,
 	id_genre	integer REFERENCES Genre(id) ON DELETE CASCADE
 );
 
 CREATE TABLE Wishlist(
-	id			SERIAL integer PRIMARY KEY,
+	id			SERIAL PRIMARY KEY,
 	id_movie	integer REFERENCES IMDB(id) ON DELETE CASCADE,
 	id_fan		integer REFERENCES Fan(id) ON DELETE CASCADE
 );
 
 CREATE TABLE Likes(
-	id			SERIAL integer PRIMARY KEY,
+	id			SERIAL PRIMARY KEY,
 	id_movie	integer REFERENCES IMDB(id) ON DELETE CASCADE,
 	id_fan		integer REFERENCES Fan(id) ON DELETE CASCADE
 );
 
 CREATE TABLE Dislikes(
-	id			SERIAL integer PRIMARY KEY,
+	id			SERIAL PRIMARY KEY,
 	id_movie	integer REFERENCES IMDB(id) ON DELETE CASCADE,
 	id_fan			integer REFERENCES Fan(id) ON DELETE CASCADE
 );
 
 CREATE TABLE Watched(
-	id			SERIAL integer PRIMARY KEY,
+	id			SERIAL PRIMARY KEY,
 	id_movie	integer REFERENCES IMDB(id) ON DELETE CASCADE,
 	id_fan		integer REFERENCES Fan(id) ON DELETE CASCADE
 );
+
 
