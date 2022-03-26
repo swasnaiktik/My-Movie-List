@@ -73,8 +73,8 @@ def getIMDBQuery(row):
     if table_instances != '':
         table_instances = table_instances[:-2]
 
-    query = f"INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, genre, director, star_1, star_2, star_3, star_4)\n\
-            SELECT {validate(row['Poster_Link'])},{validate(row['Series_Title'])},{validate(row['Released_Year'], 'i')},{validate(row['Runtime'], 'i')},{validate(row['IMDB_Rating'], 'f')},{validate(row['Overview'])},{validate(row['Meta_score'], 'i')},{validate(row['No_of_Votes'], 'i')},{validate(row['Gross'], 'i')}, {cid}, 1, {did}, {s1id},{s2id},{s3id},{s4id}\n\
+    query = f"INSERT INTO IMDB (poster_link, title, release, length, rating, overview, meta_score, total_votes, gross, certificate, director, star_1, star_2, star_3, star_4)\n\
+            SELECT {validate(row['Poster_Link'])},{validate(row['Series_Title'])},{validate(row['Released_Year'], 'i')},{validate(row['Runtime'], 'i')},{validate(row['IMDB_Rating'], 'f')},{validate(row['Overview'])},{validate(row['Meta_score'], 'i')},{validate(row['No_of_Votes'], 'i')},{validate(row['Gross'], 'i')}, {cid}, {did}, {s1id},{s2id},{s3id},{s4id}\n\
             FROM {table_instances}\n\
             WHERE {category_str};\n"
 
