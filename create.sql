@@ -36,7 +36,6 @@ CREATE TABLE IMDB (
 	total_votes	integer,
 	gross		integer,
 	certificate	integer REFERENCES Certificate(id) ON DELETE SET NULL,
-	genre		integer REFERENCES Genre(id) ON DELETE SET NULL,
 	director	integer REFERENCES Director(id) ON DELETE SET NULL,
 	star_1		integer REFERENCES Star(id) ON DELETE SET NULL,
 	star_2		integer REFERENCES Star(id) ON DELETE SET NULL,
