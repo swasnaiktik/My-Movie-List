@@ -3,4 +3,34 @@
 
 {% block content %}
 <h1>Home Page</h1>
+
+<table border="1">
+  <tr>
+    <th>Poster</th>
+    <th>Title</th>
+    <th>Year</th>
+    <th>Length (mins)</th>
+    <th>Rating</th>
+    <th>Overview</th>
+    <th>Meta Score</th>
+    <th>Total Votes</th>
+    <th>Gross ($)</th>
+  </tr>
+  {% for mov in movies %}
+  <tr>
+    <th><img src="{{mov[1]}}"></th>
+    <th>{{mov[2]}}</th>
+    <th>{{mov[3]}}</th>
+    <th>{{mov[4]}}</th>
+    <th>{{mov[5]}}</th>
+    <th>{{mov[6]}}</th>
+    <th>{{mov[7]}}</th>
+    <th>{{mov[8]}}</th>
+    <th>{{mov[9]}}</th>
+  </tr>
+  {% endfor %}
+</table>
+
+
+
 {% endblock %}
