@@ -13,6 +13,7 @@ def login():
         if fan:
             flash('Logged in successfully!', category='success')
             session['fan'] = username
+            session['fan_id'] = database.getFanId(username)
             return redirect(url_for('views.home'))
         else:
             flash('Username does not exist.', category='error')
@@ -21,13 +22,14 @@ def login():
 @auth.route('/logout')
 def logout():
     session['fan'] = None
+    session['fan_id'] = None
     return redirect(url_for('auth.login'))
 
 @auth.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
         username = request.form.get('username')
-        age = request.form.get('age')
+        age = int(request.form.get('age'))
         if len(username) < 4:
             flash('Username must be at least 4 characters long', category='error')
         elif database.fanExists(username):
@@ -36,6 +38,7 @@ def register():
             flash('Registered as a fan!', category='success')
             database.insertFan(username, age)
             session['fan'] = username
+            session['fan_id'] = database.getFanId(username)
             return redirect(url_for('views.home'))
             
     return render_template('register.html')

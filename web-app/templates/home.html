@@ -27,6 +27,28 @@
     <th>{{mov[7]}}</th>
     <th>{{mov[8]}}</th>
     <th>{{mov[9]}}</th>
+    <th>
+      <form method="POST">
+        <input type="hidden" name="movieId" value="{{mov[0]}}">
+        <input type="hidden" name="action" value="Likes">
+        <input type="submit" value="Like">
+      </form>
+      <form method="POST">
+        <input type="hidden" name="movieId" value="{{mov[0]}}">
+        <input type="hidden" name="action" value="Dislikes">
+        <input type="submit" value="Dislike">
+      </form>
+      <form method="POST">
+        <input type="hidden" name="movieId" value="{{mov[0]}}">
+        <input type="hidden" name="action" value="Wishlist">
+        <input type="submit" value="Add to Wishlist">
+      </form>
+      <form method="POST">
+        <input type="hidden" name="movieId" value="{{mov[0]}}">
+        <input type="hidden" name="action" value="Watched">
+        <input type="submit" value="Add to Watched">
+      </form>
+    </th>
   </tr>
   {% endfor %}
 </table>
