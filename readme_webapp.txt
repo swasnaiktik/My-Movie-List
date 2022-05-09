@@ -13,7 +13,7 @@ Windows:
 > .\\my_venv\Scripts\activate 
 
 OSX & Linux:
-$ source myproject/bin/activate
+$ source my_venv/bin/activate
 
 4. Once activated, install flask and psycopg2
 > pip install flask
