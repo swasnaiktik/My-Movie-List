@@ -7,7 +7,7 @@ Create virtual environment
 > python3 -m venv my_venv
 
 Activate venv
-> .\\venv\Scripts\activate 
+> .\\my_venv\Scripts\activate 
 
 Once activated, install flask and psycopg2
 > pip install flask
