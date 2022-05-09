@@ -26,6 +26,8 @@ $ export FLASK_ENV=__init__
 Fish:
 $ set -x FLASK_ENV __init__
 
+Set the database connection in database.py
+Edit line 2 of database.py with the appropriate name, user, password, host, and port used for the creation of the database in PGAdmin.
 
 Start the web app
 > py -m flask run
