@@ -14,7 +14,18 @@ Once activated, install flask and psycopg2
 > pip install psycopg2
 
 Set the FLASK_APP environment variable
-> $env:FLASK_APP="__init__"
+Powershell
+> $env:FLASK_APP = "__init__"
+
+CMD:
+> set FLASK_ENV=__init__
+
+Bash:
+$ export FLASK_ENV=__init__
+
+Fish:
+$ set -x FLASK_ENV __init__
+
 
 Start the web app
 > py -m flask run
