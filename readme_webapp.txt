@@ -1,10 +1,7 @@
 Installation Steps
 
-Clone this repository.
-> git clone https://github.com/swasnaiktik/My-Movie-List.git
-
 cd into web app directory
-> cd My-Movie-List\web-app
+> cd web-app
 
 Create virtual environment
 > python3 -m venv my_venv
