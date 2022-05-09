@@ -1,19 +1,26 @@
 Installation Steps
 
-cd into web app directory
+1. cd into web app directory
 > cd web-app
 
-Create virtual environment
-> python3 -m venv my_venv
 
-Activate venv
+2. Create virtual environment
+> py -m venv my_venv
+
+
+3. Activate venv
+Windows:
 > .\\my_venv\Scripts\activate 
 
-Once activated, install flask and psycopg2
+OSX & Linux:
+$ source myproject/bin/activate
+
+4. Once activated, install flask and psycopg2
 > pip install flask
 > pip install psycopg2
 
-Set the FLASK_APP environment variable
+
+5. Set the FLASK_APP environment variable
 Powershell
 > $env:FLASK_APP = "__init__"
 
@@ -26,8 +33,10 @@ $ export FLASK_ENV=__init__
 Fish:
 $ set -x FLASK_ENV __init__
 
-Set the database connection in database.py
+
+6. Set the database connection in database.py
 Edit line 2 of database.py with the appropriate name, user, password, host, and port used for the creation of the database in PGAdmin.
 
-Start the web app
+
+7. Start the web app
 > py -m flask run
